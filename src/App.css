@@ -1,38 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(24, 22, 22);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* height: 100vh; */
+    display: grid;
+    place-items: center; 
+    height: 100vh;
+}
+
 .App {
-  text-align: center;
+    border-radius: 15px;
+    max-width:500px;
+    overflow: hidden;
+    border: 1px solid rgb(99, 98, 98);
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.results {
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: right;
+    border: none;
+    background-color: rgb(41, 39, 39);
+    color: white;
+    border-radius: 25px;
+    margin-top: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button {
+    color: white;
+    background-color: rgb(58, 57, 57);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    margin: 0.3rem;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+    background-color: rgb(117, 115, 115);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:active {
+    background-color: rgb(197, 193, 193);
+}
+
+.zero {
+    width: 200px;
+}
+
+.percentage, .plus-minus, .AC {
+    background-color: rgb(120, 121, 122);
+}
+
+.percentage:hover, .plus-minus:hover, .AC:hover {
+    background-color: rgb(177, 176, 175);
+}
+
+.percentage:active, .plus-minus:active, .AC:active {
+    background-color: rgb(221, 221, 220);
+}
+
+.equla, .plus, .minus, .dual, .fractional {
+    background-color: rgb(243, 165, 48);
+}
+
+.equla:hover, .plus:hover, .minus:hover, .dual:hover, .fractional:hover {
+    background-color: rgb(238, 238, 238);
+    color: rgb(243, 165, 48);
+}
+
+.equla:active, .plus:active, .minus:active, .dual:active, .fractional:active {
+    background-color: rgb(243, 165, 48);
+    color: rgb(238, 238, 238);
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .App {
+        max-width: 100%;
+    
+    }
+
+    .results {
+        font-size: 4rem;
+    }
+
+    button {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+
+    .zero {
+        width: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .App {
+        max-width: 100%;
+    }
+
+    .results {
+        font-size: 3rem;
+    }
+
+    button {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .zero {
+        width: 120px;
+    }
 }
